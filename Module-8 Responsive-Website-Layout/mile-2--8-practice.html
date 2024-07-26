@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design a responsive flex layout</title>
+    <style>
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+            /* height: 50%; */
+        }
+        .container{
+            display: grid;   
+            grid-template-columns: 1fr 3fr ;
+            border: 2px solid black;
+            border-radius: 5px ;
+            gap: 5px;
+            padding: 10px;
+            height:100%;
+            width: 100vh;
+        }
+        .left-right{
+         background-color: aliceblue;
+         border-radius: 5px;
+         height: 70vh;
+         width: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-size: 1.5em;
+        }
+
+        #left{
+            background-color:goldenrod;
+            width: 100%;
+            width: 100%;
+        }
+        #right{
+            width: 100%;
+            width: 100%;
+        }
+
+        @media screen and (max-width:1550px) {
+            .container{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                
+
+             
+            }  
+        }
+    </style>
+</head>
+<body>
+    <h3 id="desktop">Desktop</h3>
+    <div class="container">
+       
+     
+        <div class="left-right" id="left">left</div>
+        <div class="left-right" id="right">right</div>
+    
+    </div>
+</body>
+</html>
